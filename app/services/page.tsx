@@ -120,7 +120,7 @@ export default function Page() {
               alt="TBATS"
               width={120}
               height={28}
-              className="hidden sm:block opacity-95"
+              className="block  opacity-95"
               priority
             />
           </a>
@@ -129,7 +129,7 @@ export default function Page() {
             <a className="hover:text-white" href="#services">
               Services
             </a>
-            <a className="hover:text-white" href="#about">
+            <a className="hidden lg:block hover:text-white" href="#about">
               About
             </a>
             <a className="hover:text-white" href="#contact">
@@ -137,7 +137,7 @@ export default function Page() {
             </a>
             <a
               href="#contact"
-              className="rounded-full px-4 py-2 text-white bg-[color:var(--pri)] hover:brightness-110 transition shadow-glow"
+              className="hidden lg:block rounded-full px-4 py-2 text-white bg-[color:var(--pri)] hover:brightness-110 transition shadow-glow"
             >
               Get a Quote
             </a>
