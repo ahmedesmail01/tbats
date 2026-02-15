@@ -66,7 +66,7 @@ export default function Page() {
           "On-site support",
           "Quality checklists",
         ],
-        img: "https://images.unsplash.com/photo-1675684785101-83ad2a278e22?auto=format&fit=crop&w=1400&q=80",
+        img: "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEZhY2lsaXR5JTIwTWFuYWdlbWVudHxlbnwwfHwwfHx8MA%3D%3D",
       },
       {
         key: "insurance" as const,
@@ -78,7 +78,7 @@ export default function Page() {
           "Business protection",
           "Support & follow-up",
         ],
-        img: "https://images.unsplash.com/photo-1732543499124-21de8c284836?auto=format&fit=crop&w=1400&q=80",
+        img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW5zdXJhbmNlfGVufDB8fDB8fHww",
       },
     ],
     [],
@@ -321,12 +321,12 @@ export default function Page() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-1">
               <div className="flex items-center gap-3">
-                <Image
+                {/* <Image
                   src="/brand/icon.png"
                   alt="TBATS"
                   width={44}
                   height={44}
-                />
+                /> */}
                 <div>
                   <div className="text-lg font-semibold">TBATS</div>
                   <div className="text-sm text-white/70">
@@ -477,10 +477,10 @@ export default function Page() {
               </a>
             </div>
 
-            <div className="mt-8 text-xs text-white/55">
+            {/* <div className="mt-8 text-xs text-white/55">
               Branding colors inspired by your provided draft
-              {/* :contentReference[oaicite:7]{(index = 7)} */}
-            </div>
+              :contentReference[oaicite:7]{(index = 7)}
+            </div> */}
           </div>
         </div>
       </section>
@@ -489,7 +489,12 @@ export default function Page() {
       <footer className="border-t border-white/10 bg-black/20">
         <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col sm:flex-row gap-4 items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/brand/icon.png" alt="TBATS" width={28} height={28} />
+            <Image
+              src="/brand/wordmark.png"
+              alt="TBATS"
+              width={28}
+              height={28}
+            />
             <span className="text-sm text-white/70">
               &copy; {new Date().getFullYear()} TBATS
             </span>
