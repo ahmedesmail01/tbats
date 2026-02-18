@@ -102,9 +102,9 @@ export default function Page() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50">
       {/* NAV */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-black/25 border-b border-white/10">
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-black/25 border-b border-slate-200 dark:border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
             {/* <Image
@@ -125,14 +125,23 @@ export default function Page() {
             />
           </a>
 
-          <nav className="flex items-center gap-5 text-sm text-white/80">
-            <a className="hover:text-white" href="#services">
+          <nav className="flex items-center gap-5 text-sm text-slate-600 dark:text-white/80">
+            <a
+              className="hover:text-slate-900 dark:hover:text-white"
+              href="#services"
+            >
               Services
             </a>
-            <a className="hidden lg:block hover:text-white" href="#about">
+            <a
+              className="hidden lg:block hover:text-slate-900 dark:hover:text-white"
+              href="#about"
+            >
               About
             </a>
-            <a className="hover:text-white" href="#contact">
+            <a
+              className="hover:text-slate-900 dark:hover:text-white"
+              href="#contact"
+            >
               Contact
             </a>
             <a
@@ -150,17 +159,19 @@ export default function Page() {
         <div className="mx-auto max-w-6xl px-4 pt-14 pb-10 md:pt-20 md:pb-16">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <p className="text-sm text-white/70 tracking-wide">
+              <p className="text-sm text-slate-500 dark:text-white/70 tracking-wide">
                 Protecting what matters
               </p>
 
               <h1 className="mt-3 text-4xl md:text-6xl font-semibold leading-tight">
                 One organization for{" "}
-                <span className="text-white">Security, Growth, Operations</span>{" "}
+                <span className="text-blue-600 dark:text-white">
+                  Security, Growth, Operations
+                </span>{" "}
                 & Protection.
               </h1>
 
-              <p className="mt-5 text-base md:text-lg text-white/75 max-w-xl">
+              <p className="mt-5 text-base md:text-lg text-slate-600 dark:text-white/75 max-w-xl">
                 TBATS delivers integrated services: low-current & CCTV
                 solutions, marketing execution, facility management, and
                 insurance—built for reliability and outcomes.
@@ -169,7 +180,7 @@ export default function Page() {
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
                 <a
                   href="#services"
-                  className="rounded-xl px-5 py-3 bg-white/10 border border-white/15 hover:bg-white/15 transition"
+                  className="rounded-xl px-5 py-3 bg-slate-200/50 dark:bg-white/10 border border-slate-200 dark:border-white/15 hover:bg-slate-200 dark:hover:bg-white/15 transition"
                 >
                   Explore Services
                 </a>
@@ -190,10 +201,12 @@ export default function Page() {
                 ].map((i) => (
                   <div
                     key={i.k}
-                    className="rounded-2xl bg-white/5 border border-white/10 p-4"
+                    className="rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 p-4 shadow-sm dark:shadow-none"
                   >
                     <div className="text-sm font-medium">{i.k}</div>
-                    <div className="text-xs text-white/70 mt-1">{i.v}</div>
+                    <div className="text-xs text-slate-500 dark:text-white/70 mt-1">
+                      {i.v}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -201,7 +214,7 @@ export default function Page() {
 
             <div className="relative">
               <div className="absolute -inset-6 rounded-[28px] bg-[color:var(--pri)]/10 blur-2xl" />
-              <div className="relative rounded-[28px] overflow-hidden border border-white/10 bg-white/5 shadow-glow">
+              <div className="relative rounded-[28px] overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 shadow-xl dark:shadow-glow">
                 <div className="relative h-[340px] md:h-[440px]">
                   <Image
                     src={active.img}
@@ -214,11 +227,15 @@ export default function Page() {
                 </div>
 
                 <div className="p-6">
-                  <div className="text-xs text-white/65">Featured Service</div>
+                  <div className="text-xs text-slate-500 dark:text-white/65">
+                    Featured Service
+                  </div>
                   <div className="mt-1 text-xl font-semibold">
                     {active.title}
                   </div>
-                  <p className="mt-2 text-sm text-white/75">{active.desc}</p>
+                  <p className="mt-2 text-sm text-slate-600 dark:text-white/75">
+                    {active.desc}
+                  </p>
 
                   <div className="mt-5 flex flex-wrap gap-2">
                     {services.map((s) => (
@@ -228,8 +245,8 @@ export default function Page() {
                         className={[
                           "text-xs px-3 py-2 rounded-full border transition",
                           s.key === service
-                            ? "bg-white/15 border-white/20 text-white"
-                            : "bg-white/5 border-white/10 text-white/70 hover:text-white hover:bg-white/10",
+                            ? "bg-slate-100 dark:bg-white/15 border-slate-200 dark:border-white/20 text-slate-900 dark:text-white font-medium"
+                            : "bg-transparent dark:bg-white/5 border-slate-200 dark:border-white/10 text-slate-500 dark:text-white/70 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/10",
                         ].join(" ")}
                       >
                         {s.title}
@@ -239,7 +256,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="mt-4 text-xs text-white/55">
+              <div className="mt-4 text-xs text-slate-400 dark:text-white/55">
                 Tip: switch the featured service using the pills above.
               </div>
             </div>
@@ -252,14 +269,14 @@ export default function Page() {
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold">Our Services</h2>
-            <p className="mt-2 text-white/70 max-w-2xl">
+            <p className="mt-2 text-slate-600 dark:text-white/70 max-w-2xl">
               Choose exactly what you need—or combine services for a full
               solution.
             </p>
           </div>
           <a
             href="#contact"
-            className="rounded-xl px-4 py-2 bg-white/10 border border-white/15 hover:bg-white/15 transition"
+            className="rounded-xl px-4 py-2 bg-slate-200/50 dark:bg-white/10 border border-slate-200 dark:border-white/15 hover:bg-slate-200 dark:hover:bg-white/15 transition"
           >
             Request a quote
           </a>
@@ -269,7 +286,7 @@ export default function Page() {
           {services.map((s) => (
             <div
               key={s.key}
-              className="group rounded-[26px] overflow-hidden border border-white/10 bg-white/5 hover:bg-white/7 transition shadow-glow"
+              className="group rounded-[26px] overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:bg-slate-50 dark:hover:bg-white/7 transition shadow-md dark:shadow-glow"
             >
               <div className="relative h-56">
                 <Image
@@ -281,12 +298,14 @@ export default function Page() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="text-lg font-semibold">{s.title}</div>
-                  <div className="text-sm text-white/75 mt-1">{s.desc}</div>
+                  <div className="text-sm text-white/90 dark:text-white/75 mt-1">
+                    {s.desc}
+                  </div>
                 </div>
               </div>
 
               <div className="p-6">
-                <ul className="grid sm:grid-cols-2 gap-2 text-sm text-white/80">
+                <ul className="grid sm:grid-cols-2 gap-2 text-sm text-slate-600 dark:text-white/80">
                   {s.bullets.map((b) => (
                     <li key={b} className="flex gap-2">
                       <span className="mt-[6px] h-2 w-2 rounded-full bg-[color:var(--pri2)]/90" />
@@ -298,7 +317,7 @@ export default function Page() {
                 <div className="mt-6 flex items-center justify-between">
                   <button
                     onClick={() => setService(s.key)}
-                    className="text-sm text-white/85 hover:text-white underline underline-offset-4"
+                    className="text-sm text-slate-500 dark:text-white/85 hover:text-slate-900 dark:hover:text-white underline underline-offset-4"
                   >
                     {/* Set as featured */}
                   </button>
@@ -317,7 +336,7 @@ export default function Page() {
 
       {/* ABOUT */}
       <section id="about" className="mx-auto max-w-6xl px-4 pb-12 md:pb-16">
-        <div className="rounded-[30px] border border-white/10 bg-white/5 p-8 md:p-10 shadow-glow">
+        <div className="rounded-[30px] border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-8 md:p-10 shadow-lg dark:shadow-glow">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-1">
               <div className="flex items-center gap-3">
@@ -329,7 +348,7 @@ export default function Page() {
                 /> */}
                 <div>
                   <div className="text-lg font-semibold">TBATS</div>
-                  <div className="text-sm text-white/70">
+                  <div className="text-sm text-slate-500 dark:text-white/70">
                     Protecting what matters
                   </div>
                 </div>
@@ -337,7 +356,7 @@ export default function Page() {
             </div>
 
             <div className="md:col-span-2">
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-slate-600 dark:text-white/80 leading-relaxed">
                 We bring together four essential capabilities under one roof:
                 security systems, marketing execution, facility operations, and
                 insurance solutions. That means faster coordination, clearer
@@ -352,10 +371,12 @@ export default function Page() {
                 ].map((x) => (
                   <div
                     key={x.t}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                    className="rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 p-4"
                   >
                     <div className="font-medium">{x.t}</div>
-                    <div className="mt-1 text-sm text-white/70">{x.d}</div>
+                    <div className="mt-1 text-sm text-slate-500 dark:text-white/70">
+                      {x.d}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -367,9 +388,9 @@ export default function Page() {
       {/* CONTACT */}
       <section id="contact" className="mx-auto max-w-6xl px-4 pb-20">
         <div className="grid lg:grid-cols-2 gap-8 items-start">
-          <div className="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-glow">
+          <div className="rounded-[30px] border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-8 shadow-lg dark:shadow-glow">
             <h3 className="text-2xl font-semibold">Contact Us</h3>
-            <p className="mt-2 text-white/70">
+            <p className="mt-2 text-slate-500 dark:text-white/70">
               Fill the form and it will open WhatsApp with your message ready to
               send.
             </p>
@@ -405,11 +426,13 @@ export default function Page() {
               </div>
 
               <div>
-                <label className="text-sm text-white/75">Service</label>
+                <label className="text-sm text-slate-600 dark:text-white/75">
+                  Service
+                </label>
                 <select
                   value={service}
                   onChange={(e) => setService(e.target.value as ServiceKey)}
-                  className="mt-2 w-full rounded-xl bg-black/30 border border-white/15 px-4 py-3 text-white outline-none focus:border-white/25"
+                  className="mt-2 w-full rounded-xl bg-slate-100 dark:bg-black/30 border border-slate-200 dark:border-white/15 px-4 py-3 text-slate-900 dark:text-white outline-none focus:border-blue-500 dark:focus:border-white/25"
                 >
                   {services.map((s) => (
                     <option key={s.key} value={s.key}>
@@ -420,7 +443,9 @@ export default function Page() {
               </div>
 
               <div>
-                <label className="text-sm text-white/75">Message</label>
+                <label className="text-sm text-slate-600 dark:text-white/75">
+                  Message
+                </label>
                 <textarea
                   value={form.message}
                   onChange={(e) =>
@@ -428,7 +453,7 @@ export default function Page() {
                   }
                   required
                   rows={5}
-                  className="mt-2 w-full rounded-xl bg-black/30 border border-white/15 px-4 py-3 text-white outline-none focus:border-white/25"
+                  className="mt-2 w-full rounded-xl bg-slate-100 dark:bg-black/30 border border-slate-200 dark:border-white/15 px-4 py-3 text-slate-900 dark:text-white outline-none focus:border-blue-500 dark:focus:border-white/25"
                   placeholder="Tell us what you need, location, timeline, etc."
                 />
               </div>
@@ -446,9 +471,9 @@ export default function Page() {
             </form>
           </div>
 
-          <div className="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-glow">
+          <div className="rounded-[30px] border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-8 shadow-lg dark:shadow-glow">
             <h3 className="text-xl font-semibold">Quick Info</h3>
-            <div className="mt-4 space-y-3 text-white/80">
+            <div className="mt-4 space-y-3 text-slate-600 dark:text-white/80">
               <InfoRow
                 k="Services"
                 v="CCTV • Marketing • Facility • Insurance"
@@ -457,10 +482,12 @@ export default function Page() {
               <InfoRow k="Coverage" v="Individuals & companies" />
             </div>
 
-            <div className="mt-8 rounded-2xl border border-white/10 bg-black/30 p-5">
-              <div className="text-sm text-white/70">Direct WhatsApp</div>
+            <div className="mt-8 rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-black/30 p-5">
+              <div className="text-sm text-slate-500 dark:text-white/70">
+                Direct WhatsApp
+              </div>
               <a
-                className="mt-2 inline-block text-white underline underline-offset-4"
+                className="mt-2 inline-block text-slate-900 dark:text-white underline underline-offset-4"
                 href={waLink({
                   Name: "",
                   Email: "",
@@ -486,7 +513,7 @@ export default function Page() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/10 bg-black/20">
+      <footer className="border-t border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-black/20">
         <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col sm:flex-row gap-4 items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
@@ -495,11 +522,13 @@ export default function Page() {
               width={28}
               height={28}
             />
-            <span className="text-sm text-white/70">
+            <span className="text-sm text-slate-500 dark:text-white/70">
               &copy; {new Date().getFullYear()} TBATS
             </span>
           </div>
-          <div className="text-sm text-white/60">Protecting what matters.</div>
+          <div className="text-sm text-slate-400 dark:text-white/60">
+            Protecting what matters.
+          </div>
         </div>
       </footer>
     </main>
@@ -515,13 +544,15 @@ function Field(props: {
 }) {
   return (
     <div>
-      <label className="text-sm text-white/75">{props.label}</label>
+      <label className="text-sm text-slate-600 dark:text-white/75">
+        {props.label}
+      </label>
       <input
         type={props.type ?? "text"}
         value={props.value}
         required={props.required}
         onChange={(e) => props.onChange(e.target.value)}
-        className="mt-2 w-full rounded-xl bg-black/30 border border-white/15 px-4 py-3 text-white outline-none focus:border-white/25"
+        className="mt-2 w-full rounded-xl bg-slate-100 dark:bg-black/30 border border-slate-200 dark:border-white/15 px-4 py-3 text-slate-900 dark:text-white outline-none focus:border-blue-500 dark:focus:border-white/25"
       />
     </div>
   );
@@ -529,9 +560,11 @@ function Field(props: {
 
 function InfoRow({ k, v }: { k: string; v: string }) {
   return (
-    <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-3">
-      <div className="text-sm text-white/65">{k}</div>
-      <div className="text-sm text-white/85 text-right">{v}</div>
+    <div className="flex items-start justify-between gap-4 border-b border-slate-200 dark:border-white/10 pb-3">
+      <div className="text-sm text-slate-500 dark:text-white/65">{k}</div>
+      <div className="text-sm text-slate-700 dark:text-white/85 text-right">
+        {v}
+      </div>
     </div>
   );
 }

@@ -1,46 +1,5 @@
 @import "tailwindcss";
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-} */
-
-:root {
-  /* Inspired by your TBATS blue/black gradient branding :contentReference[oaicite:5]{index=5} */
-  --background: #ffffff;
-  --foreground: #171717;
-
-  --bg0: #030612;
-
-  --bg1: #050a18;
-  --pri: #1237ff;
-  --pri2: #39a9ff;
-  --txt: #eaf2ff;
-  --muted: rgba(234, 242, 255, 0.72);
-  --card: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.12);
-}
-
-html,
-body {
-  height: 100%;
-}
-body {
-  background:
-    radial-gradient(
-      1200px 800px at 70% 20%,
-      rgba(18, 55, 255, 0.35),
-      transparent 55%
-    ),
-    radial-gradient(
-      900px 700px at 85% 65%,
-      rgba(57, 169, 255, 0.25),
-      transparent 55%
-    ),
-    linear-gradient(180deg, var(--bg0), var(--bg1));
-  color: var(--txt);
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -48,15 +7,75 @@ body {
   --font-mono: var(--font-geist-mono);
 }
 
+:root {
+  /* Light Mode Defaults */
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  --card: #ffffff;
+  --card-foreground: #171717;
+
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+
+  --primary: #1237ff;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --ring: #1237ff;
+
+  --radius: 0.5rem;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+
+    --card: #0a0a0a;
+    --card-foreground: #ededed;
+
+    --popover: #0a0a0a;
+    --popover-foreground: #ededed;
+
+    --border: #1e293b;
+    --input: #1e293b;
+
+    --primary: #1237ff;
+    --primary-foreground: #ffffff;
+
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #ffffff;
+
+    --ring: #1237ff;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
