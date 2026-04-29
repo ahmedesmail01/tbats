@@ -3,11 +3,23 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-montserrat);
   --font-mono: var(--font-geist-mono);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-blue: var(--brand-blue);
+  --background-image-brand-gradient: var(--brand-gradient);
 }
 
 :root {
+  /* Brand Colors */
+  --brand-dark: #081222;
+  --brand-primary: #2d46d5;
+  --brand-secondary: #3b82f6;
+  --brand-blue: #0112ff;
+  --brand-gradient: linear-gradient(135deg, #000121 0%, #000444 100%);
+
   /* Light Mode Defaults */
   --background: #ffffff;
   --foreground: #171717;
@@ -24,7 +36,7 @@
   --border: #e2e8f0;
   --input: #e2e8f0;
 
-  --primary: #1237ff;
+  --primary: var(--brand-primary);
   --primary-foreground: #ffffff;
 
   --secondary: #f1f5f9;
@@ -36,7 +48,7 @@
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
 
-  --ring: #1237ff;
+  --ring: var(--brand-primary);
 
   --radius: 0.5rem;
 }
@@ -58,7 +70,7 @@
     --border: #1e293b;
     --input: #1e293b;
 
-    --primary: #1237ff;
+    --primary: var(--brand-primary);
     --primary-foreground: #ffffff;
 
     --secondary: #1e293b;
@@ -70,12 +82,12 @@
     --destructive: #7f1d1d;
     --destructive-foreground: #ffffff;
 
-    --ring: #1237ff;
+    --ring: var(--brand-primary);
   }
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--color-brand-dark);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
