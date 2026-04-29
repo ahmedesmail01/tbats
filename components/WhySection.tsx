@@ -99,7 +99,7 @@ const WhySection = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative z-10 rounded-[40px] overflow-hidden"
+              className="relative z-10 rounded-[40px] overflow-hidden   "
             >
               <Image
                 src={image}
